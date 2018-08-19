@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+ 
+    <siteMapNode url="~/Default.aspx" title="Forsiden"  description="Hovedsiden">
+      <siteMapNode url ="~/Login.aspx" title ="Logg Inn" description ="Logge inn for brukere."/>
+      <siteMapNode url="~/Users/Utleie.aspx" title="Utleie"  description="Søke om å låne hytta." />
+      <siteMapNode url="~/UtleieOversikt.aspx" title="Oversikt utleie"  description="Oversikt over når hytta er utleid." />
+      <siteMapNode url="~/Users/User.aspx" title ="Min side" description ="Bruker profil." >
+        <siteMapNode url="~/Users/MineReservasjoner.aspx" title ="Mine reservasjoner/søknader" description ="Mine reservasjoner/søknader" />
+        </siteMapNode>
+        <siteMapNode url="~/Galleri.aspx" title="Bilder"  description="Bilder av hytta og folk som bruker den." />
+        <siteMapNode url="~/Nyheter.aspx" title="Nyheter"  description="Nyheter angående hytta." >
+          <siteMapNode url ="~/NyhetArkiv.aspx" title ="Arkiv" description ="Nyhets arkiv"/>
+          <siteMapNode url ="~/AlleNyheter.aspx" title ="Alle nyheter" description ="Alle nyheter som ikke er lagt i arkiv"/>
+          <siteMapNode url="~/Nyhet.aspx" title="Nyhet"  description="En nyhet." />
+          <siteMapNode url="~/Admin/Rediger.aspx" title="Administrer Nyheter"  description="Legge til/endre Nyheter." >
+            <siteMapNode url="~/Admin/Avsnitt.aspx" title="Administrer Avsnitt"  description="Legge til/endre avsnitt." />
+            <siteMapNode url="~/Admin/Liste.aspx" title="Administrer Liste"  description="Legge til/endre liste." >
+              <siteMapNode url="~/Admin/Underliste.aspx" title="Administrer Underliste"  description="Legge til/endre underliste." />
+            </siteMapNode>
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Vedtekter.aspx" title="Vedtekter"  description="Vedtekter for andelslaget." />
+        <siteMapNode url="~/Oppfordring.aspx" title="Oppfordring"  description="oppfordring fra styret." />
+        <siteMapNode url="~/Utleieregler.aspx" title="Utleieregler"  description="Regler for utleie av hytta." />
+        <siteMapNode url="~/Vannpumpe.aspx" title="Vannpumpe"  description="Informasjon angående vannpumpa." />
+        <siteMapNode url="~/Hytteregler.aspx" title="Hytteregler"  description="Regler for bruk av hytta." />
+        <siteMapNode url="~/Kontakt.aspx" title="Kontakt"  description="Kontaktskjema til styret." />
+        <siteMapNode url="~/Kart.aspx" title="Kart"  description="Kart og veibeskrivelse til hytta." />
+        <siteMapNode url="~/Soknadfrist.aspx" title="Søknadsfrister"  description="Søknadsfrister." />
+        <siteMapNode url="~/Admin/Admin.aspx" title="Admin"  description="Administrasjon av siden." >
+          <siteMapNode url="~/Admin/Reserver.aspx" title="Reserver"  description="Reservere på en søknad." />
+          <siteMapNode url="~/Admin/Faktura.aspx" title="Faktura"  description="Sende ut faktura." />
+          <siteMapNode url="~/Admin/OversiktUtleie.aspx" title="Oversikt utleie"  description="Søk etter utleie data" />
+          <siteMapNode url="~/Admin/SlettReservasjon.aspx" title="Endre Reservasjon"  description="Endre reservasjoner." />
+          <siteMapNode url="~/Admin/ResultSearch.aspx" title="Resultat søk"  description="Resultat søk på utleie" />
+          <siteMapNode url="~/Admin/RegistrerBetaling.aspx" title="Registrer Betaling"  description="Registrere betaling" />
+          <siteMapNode url="~/Admin/Konfigurer.aspx" title="Konfigurer"  description="Konfigurere E-post, kontonummer, pris på utleie." />
+          <siteMapNode url="~/Admin/Andelseiere.aspx" title="Andelseiere"  description="Oversikt over andelseiere med mulighet for redigering og sletting." />
+          <siteMapNode url="~/Admin/Bildegalleri.aspx" title="Bildegalleri"  description="Administrere bilder." />
+          <siteMapNode url="~/Admin/Users.aspx" title="Opprette bruker"  description="Opprette bruker." />
+        </siteMapNode>
+      </siteMapNode>
+</siteMap>

@@ -1,0 +1,8 @@
+﻿Hei.
+
+En bruker har lagt igjen en melding på siden:
+
+Navn:				##Name##
+E-post adresse:		##Email##
+
+Beskjed:			##Comments##

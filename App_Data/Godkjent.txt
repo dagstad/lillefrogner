@@ -1,0 +1,8 @@
+﻿Hei ##Fornavn##
+
+Din søknad om leie av Lille Frogneseter med reservasjonsnummer (##ResId##)
+er godkjent.
+
+
+Mvh
+Styret i LilleFrogneseter

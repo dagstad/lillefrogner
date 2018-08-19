@@ -1,0 +1,12 @@
+﻿Faktura for leie av Lille Frogneseter
+
+Her er faktura for reservasjon ID: ##ResId##:
+
+Fornavn:				##Fornavn##					Forfallsdato: ##Dato##
+Etternavn:				##Etternavn##
+E-post:					##Epost##
+
+Antall netter:			##Netter##
+
+Totalt å betale:			##Sum##
+Kontonr.:				##Kontonummer##

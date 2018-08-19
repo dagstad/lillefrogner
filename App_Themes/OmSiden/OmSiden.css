@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+@media print {
+header, nav, footer {
+	display : none;
+}
+} /*Slutt mediaprint*/
+ @media screen {
+body {
+	font-family: Lucida Sans, Verdana, Tahoma;
+	font-size: 0.95em;
+	line-height: 1.25;
+	color: #000000;
+	background-image: url('../../Elementer/squared_metal.png');
+	background-repeat: repeat;
+}
+h1 {
+	font-size: 3em;
+	color: #09C;
+	padding: 5px;
+	text-align: center;
+}
+h2 {
+	font-size: 1.3em;
+	color: #69C;
+}
+#ramme {
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFFFFF;
+}
+#hoved {
+	margin :5px;
+	padding :5px;
+}
+header {
+	display: block;
+	clear: both;
+	width: 75%;
+}
+nav {
+	background-color: #fff;
+	border: 1px solid #dedede;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	color: #888;
+	display: block;
+	margin: 8px 22px 8px 22px;
+	overflow: hidden;
+	width: 90%;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+nav ul li {
+	display: inline-block;
+	list-style-type: none;
+}
+nav > ul > li > a {
+	color: #00F;
+	display: block;
+	line-height: 56px;
+	padding: 0 24px;
+	text-decoration: none;
+}
+nav > ul > li:hover {
+	background-color: rgb( 40, 44, 47 );
+}
+nav > ul > li:hover > a {
+	color: rgb( 255, 255, 255 );
+}
+figure {
+	width:75%;
+	padding:5px;
+	border: thin solid #000;
+}
+figure img {
+	border: 1.2px dotted #069;
+	padding:3px;
+	margin:5px;
+}
+figcaption {
+	font-size: small;
+	font-weight: bold;
+	background-color: #F4F4F4;
+}
+footer {
+	clear: both;
+	width: 100%;
+}
+footer p {
+	text-align: justify;
+	font-size: 0.75em;
+	color: #333333;
+	width: 28%;
+	border-top-style: solid;
+	border-top-width: thick;
+	float: right;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-top-color: #000000;
+	border-bottom-color: #000000;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	background : linear-gradient(to right, #AFD6F7 0%, #7db9e8 100%);
+}
+} /*Slutt på screen*/

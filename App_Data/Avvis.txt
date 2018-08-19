@@ -1,0 +1,8 @@
+﻿Hei ##Fornavn##
+
+Gjelder din søknad med reservasjonsnummer (##ResId##), om leie av Lille Frogneseter.
+Beklager det ble ikke din tur denne gang, men velkommen tilbake med en ny søknad.
+
+Mvh
+Styret
+Lille Frogneseter

@@ -1,0 +1,10 @@
+﻿Hei ##Fornavn##
+
+Din søknad om leie av Lille Frogneseter med reservasjonsnummer (##ResId##)
+er sendt.
+
+Du vil få melding så snart styret har behandlet søknaden.
+
+
+Mvh
+Styret i LilleFrogneseter

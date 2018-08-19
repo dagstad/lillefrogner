@@ -1,0 +1,580 @@
+﻿/*farger #4E6F3F,#DCF1D1,#656F60,#A8EF87,#84BC6A*/
+/*farger #4E6FFF,#C4D3E8,#5870F5*/
+@media print {
+    header , nav , footer, #annonse, div #breadCrumbs   {
+        display : none ;
+    }
+
+}/*Slutt mediaprint*/
+
+@media screen {
+
+
+    body
+    {
+        font-family: Lucida Sans,Verdana, Tahoma;
+        font-size: 0.9em;
+        line-height: 1.25em;
+        color: #000000; /*background-color: #C4D3E8;*/
+        background-image: url('../../Elementer/squared_metal.png');
+        background-repeat: repeat;
+    }
+
+    table {
+        margin: 0px 2px 0px 0px;
+        padding: 0px;
+    }
+
+    td {
+        margin: 0px;
+        padding: 3px;
+        vertical-align: top;
+    }
+
+    img {
+        border: 0px;
+        margin: 0px;
+    }
+
+    p {
+        margin-top: 2px;
+    }
+
+    h1, h2, h3 {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    a:active, a:hover, a:link, a:visited {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    h1 {
+        font-size: 4em;
+        font-weight: bold;
+        color: #000000;
+        /*background-color: #AFD6F7;*/
+        /*background : linear-gradient(to right, #7db9e8 0%  ,#1e5799 100%) ;*/
+        height: 100px;
+        border:1px solid #C0C0C0;
+        border-radius :2px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        color: #000000;
+        font-weight: bold;
+        margin-top: 6px;
+        margin-bottom: 4px;
+        padding : 3px;
+         background : linear-gradient(to right, #AFD6F7 20%  ,#7db9e8 100%) ;
+          border-radius :4px;
+          box-shadow : 0px 2px 7px #888;
+       max-width : 670px;
+        
+        
+    }
+    
+   .omSidenP {
+    max-width : 670px;
+   
+   }
+
+    h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        
+    
+    }
+
+    h4 {
+        font-size: 0.85em;
+    }
+
+    h5 {
+        font-size: 0.75em;
+    }
+
+    dt {
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    .dato {
+        font-size: 0.72em;
+    }
+
+    .nyhetListeTekst {
+        font-size: 0.85em;
+        font-weight: bold;
+        -moz-text-decoration-line: underline;
+        text-decoration-line: underline;
+        text-decoration: underline;
+        color: #0000FF;
+    }
+
+    .hjelpeTekst {
+        font-size: 0.89em;
+        font-weight: bold;
+        color: blue;
+    }
+
+    .soknadTekst{
+        font-weight: bold;
+        color: blue;
+    }
+    
+    
+
+    /* Stilering av ramme oppsett*/
+
+    #ramme {
+        width: 1030px;/*1024px*/
+        margin-right: auto;
+        margin-left: auto;
+        background-color: White;
+    }
+    
+      #hoved {
+        margin :10px 0px 10px 0px;
+        padding :0px 5px 0px 5px;
+        float: left;
+        width: 870px;/*865px*/
+        
+        
+    }
+
+    header {
+        text-align: center;
+        clear: both;
+        width: 1030px;
+        
+          background : linear-gradient(to right, #afd6f7 0%  ,#7db9e8 100%);
+          border-radius :2px;
+          box-shadow : 7px 7px 4px #888;
+/*background-image: url(/elementer/toppenlillefrogne.gif);*/
+
+    }
+
+    nav {
+        float: left;
+        display: block;
+        width: 125px;/*125px*/
+        padding-left: 0px;
+        padding-top: 1px;
+        background-repeat: no-repeat;
+        margin-right :25px;/*25px*/
+    }
+    
+    .panel 
+    {
+        padding-right:8px;
+        }
+    
+     #annonse {
+        
+        float: right;
+        width: 185px;
+        background-color: #FFFFFF;
+        border-left-style: solid;
+        border-left-width: thin;
+        border-left-color: #C0C0C0;
+        padding-left: 2px;
+        padding-top: 5px;
+        padding-bottom:5px;
+        margin-left:5px
+    }
+
+    aside {
+        float: right;
+        font-size: 0.7em;
+    }
+
+    /*Meny stileringer*/
+
+    ul.level1 {
+        /*Hoved meny stilering*/
+        font-size: 1.18em;
+        font-weight: bold;
+        /*color: #FFFFFF;*/
+        list-style-type: none;
+        background : linear-gradient(to right, #AFD6F7 0%  ,#7db9e8 100%) ;
+         box-shadow : 7px 7px 4px #888;
+
+    }
+
+
+    a.level2 {
+        /*Stilregler for sub-menyer*/
+        padding: 5px;
+        margin: 0px ;
+        border: thin outset #669933;
+        border-radius :4px;
+        height :27px;
+       
+    }
+
+
+
+
+
+        a.level1:hover, a.level2:hover {
+            /*Stilregler for når man tar musen over */
+            background-color: #C4D3E8;
+            border: thin outset #000000;
+          
+        }
+
+
+
+
+  
+
+    #breadCrumbs {
+        clear: both;
+        border-bottom: thin solid #1e5799;
+        color: Black;
+        font-weight: bold;
+        padding: 4px;
+       
+    }
+
+        #breadCrumbs a:link, #breadCrumbs a:visited{
+             text-decoration: none;
+            color: #4062C3;
+        }
+         #breadCrumbs a:active {
+            text-decoration: none;
+            color: Black;
+        }
+
+        #breadCrumbs a:hover {
+            text-decoration: none;
+            color: Blue;
+        }
+
+    #SiteDivCred {
+        font-weight: bold;
+        font-size: 1.0em;
+        margin-top: 0px;
+        padding:  2px 0px;
+        text-align: center;
+        background : linear-gradient(to right, #AFD6F7 0%  ,#7db9e8 100%) ;
+        box-shadow : 7px 7px 4px #888;
+        border: thin outset #669933;
+        border-radius :2px;
+        margin-bottom: 10px;
+        width: 130px;
+    }
+
+
+   
+
+    footer {
+        clear: both;
+        width: 100%;
+        
+    }
+
+        footer p {
+            text-align: justify;
+            font-size: 0.75em;
+            color: #333333;
+            width: 28%;
+            border-top-style: solid;
+            border-top-width: thick;
+            float: right;
+            border-bottom-style: solid;
+            border-bottom-width: thin;
+            border-top-color: #000000;
+            border-bottom-color: #000000;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            background : linear-gradient(to right, #AFD6F7 0%  ,#7db9e8 100%) ;
+        }
+
+
+
+
+
+    /* generelle elementklasser */
+
+    .left {
+        margin-right: 8px;
+        float: left;
+        width: 420px;/*420px*/
+    }
+
+    .right {
+        margin-left: 8px;
+        float: right;
+        width: 420px;/*420px*/
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .wide {
+        width: 65%;
+    }
+
+    .reset {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .textbglt {
+        background-color: #CFE2F1;
+         
+    }
+
+
+    .topline {
+        border-top-style: solid;
+        border-top-width: medium;
+        border-top-color: #808080;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+
+    /* ASP stileringer */
+   
+    .GridHeadStyle
+    {
+        padding: 4px;
+        font-weight: bold;
+        background-color: #83BDEA; /*background : linear-gradient(to right, #AFD6F7 0%  ,#7db9e8 100%) ;*/
+        border-radius: 3px;
+        /*box-shadow: 0px 2px 2px #888;*/
+    }
+
+    .GridFootStyle {
+        padding: 4px;
+        background-color: #6DAAD9;
+        font-weight: bold;
+        
+        border-radius :3px;
+        box-shadow : 0px 2px 2px #888;
+    }
+
+    .GridCellStyle {
+        padding: 2px 4px;
+        border: solid 1px;
+
+    }
+
+    .GridCellClear {
+        padding: 2px 4px;
+    }
+
+
+    .tealbgdk {
+        background-color: #007070;
+    }
+
+    .divBoxGalleri{
+        width:660px;
+    }
+
+    .nyhetOversiktImg {
+       width:200px;
+        height: 150px;
+        margin: 0px 6px 3px 0px;
+        float: left;
+    }
+
+    .galleriAdminImg{
+        
+        height :150px;
+        margin: 0px 6px 3px 0px;
+    }
+
+    .thumbNews {
+        width: 52px;
+        height: 78px;
+        margin: 1px;
+    }
+
+    .adminIMG {
+        width:200px;
+       height: 80px;
+        margin: 2px;
+        float: left;
+    }
+
+    .forsideIMG {
+        width: 98%;/*667px*/
+       /*height: 300px;*/
+        margin: 4px;
+        float: left;
+        padding-right: 4px;
+    }
+
+    .nyhetIMG {
+        width: 195px;
+        height: 160px;
+        margin: 4px;
+        float: left;
+        border: 5px solid black;
+    }
+
+    .storeIMG {
+        width: 98%;
+       /* height: 350px;*/
+        margin: 4px;
+    }
+
+    .oversiktTumb {
+        width: 75px;
+        height: 55px;
+        margin: 2px;
+    }
+
+    .listebox {
+        float: left;
+        clear: left;
+        margin: 3px;
+        border: 2px solid black;
+        padding: 5px;
+    }
+
+    .contbox {
+        float: left;
+        clear: left;
+        width: 180px;
+        margin: 3px;
+    }
+
+    .sokBox{
+        width:665px;
+    }
+    .sokBoxRight {
+        width :320px ;/*320px*/
+        height:140px;
+        float : right ;
+        padding : 5px;
+       margin :5px;
+      background-color : #93c661 ;
+
+       
+    }
+    .sokBoxLeft{
+        width :320px;/*320px*/
+        height:140px;
+        float:left ;
+        padding : 5px;
+        border-right : 2px solid grey;
+        border-bottom : 2px solid grey;
+         background-color : #AFD6F7 ;
+    }
+    .ItemContainer {
+        width: 690px;
+        list-style-type: none;
+        margin :0px;
+    }
+
+        .ItemContainer li {
+            height: 300px;
+            width: 250px;
+            float: left;
+        }
+
+            .ItemContainer li img {
+                width: 150px;
+                margin: 10px 20px 10px 0;
+            }
+
+    .oppbox {
+        float: right;
+        clear: right;
+        width: 560px;
+    }
+
+    .listbox {
+        width: 150px;/*150px*/
+    }
+
+    .textnote {
+        font-size: smaller;
+    }
+
+    .hyperlink {
+        padding: 2px;
+        background-color: #d1ecf1;
+        font-weight: bold;
+        border: thin outset #83A000;
+        margin: 0px 2px 2px 0px;
+        color: #000000;
+    }
+
+   
+
+    .textHeading {
+        font-size: 0.98em;
+        font-weight: bold;
+        color: #0000FF;
+    }
+
+    .ErrorMessage {
+        color: red;
+    }
+
+    .detailPadding {
+        padding: 2px;
+    }
+
+    .brukerBoxUtleie{
+        font-weight:100 ;
+        font-size:x-small ;
+        border: thin #4062C3 solid;
+        background-color : #AFD6F7 ;
+    }
+
+    .nyhetOversiktTekst{
+        border: 2px dotted blue;
+    }
+
+    .soknadbox {
+        font-weight: bold ;
+        font-size: medium;
+        max-width: 660px;/*660px*/
+        font-family: "Courier New", Courier, monospace;
+        color: #0000FF;
+        background-color: #ffffff;
+        padding: 5px;
+        margin: 2px;
+        border: thin #4062C3 solid;
+
+         /*background : linear-gradient(to right, #AFD6F7 0%  ,#7db9e8 100%) ;*/
+          border-radius :5px;
+          box-shadow : 3px 3px 1px #888;
+
+    }
+    
+    .kalender
+    {
+        text-transform: capitalize;
+    }
+
+    .feilBoks{
+        font-weight: bold ;
+        color: #ff0027;
+        background-color: #ffffff;
+        
+        padding: 5px;
+        margin: 2px;
+        border: thin #ff5d5d solid;
+        border-radius :5px;
+        box-shadow : 3px 3px 1px #888;
+    }
+
+    .DBUpdateLead  {padding:6px 4px 2px 4px;vertical-align:top}
+.DBUpdateCell  {padding:2px}
+
+
+}/*slutt screen*/

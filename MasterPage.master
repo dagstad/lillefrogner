@@ -1,0 +1,109 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE>
+<%--html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Lille Frogneseter</title>
+    <%--Hide this line for IE (needed for Firefox and others)
+<![if !IE]>
+<link rel="icon" href="~/Elementer/favicon.ico" type="image/x-icon" />
+<![endif]>>
+ This is needed for IE--%>
+    <link rel="shortcut icon" href="~/Elementer/favicon.ico" type="image/ico" />
+    <%--  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />--%>
+    <%--  <link rel="stylesheet" href="/resources/demos/style.css" />--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="description" content="Hjemmeside for andelslaget Lille Frogneseter. Utleie av andelsalgets hytte." />
+    <meta name="author" content ="Kristian Dagstad Myhre" />
+    <meta name="google-site-verification" content="X6c7ecT65a6DWMl5_VWupc0uZPc_K2BCp310hefmDO4" />
+   
+    <meta name ="keywords" content ="Lille Frogneseter, Lifjell, Bø, Sommarland, Raukleiv" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="http://code.jquery.com/jquery-1.9.1.js" />
+                <asp:ScriptReference Path="http://code.jquery.com/ui/1.10.3/jquery-ui.js" />
+
+            </Scripts>
+        </asp:ScriptManager>
+       
+        <div id="ramme">
+             
+            <header> <h1>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx"
+                        ToolTip="Forsiden"
+                        margin="0px" padding="0px" >
+                   
+                        <asp:Image ID="logo" ImageUrl="~/Elementer/toppenLilleFrognerLysSkrift.png" runat="server"  /><%--CssClass="left" Height="100%" Width="140px"--%>
+                       <%-- Lille Frogneseter--%>
+                   
+                    </asp:HyperLink>
+                </h1>
+            </header>
+            <%--Her slutter header--%>
+
+
+            <nav>
+                <div id="SiteDivCred">
+                    <asp:Label ID="usrCred" runat="server" />
+                    <hr />
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Logg inn" LogoutText="Logg ut" />
+                </div>
+                 <%--Her slutter SiteDivCred--%>
+
+                <asp:Menu ID="Menu1" runat="server" DataSourceID="XmlDataSource1" StaticDisplayLevels="2">
+                    <DataBindings>
+                        <asp:MenuItemBinding DataMember="MenuItem" NavigateUrlField="url" TargetField="target"
+                            TextField="title" ToolTipField="tip" />
+                    </DataBindings>
+               </asp:Menu>
+            </nav>
+            <%--Her slutter nav--%>
+
+
+            <div id="hoved">
+                <div id="breadCrumbs">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" -- ">
+                    </asp:SiteMapPath>
+                </div>
+                <%--Her slutter div id ="breadCrumbs"--%>
+
+                 <div id="annonse">
+                <script src="http://www.yr.no/sted/Norge/Telemark/Bø/Lifjell_skisenter/ekstern_boks_liten.js"></script>
+                <noscript><a href="http://www.yr.no/sted/Norge/Telemark/Bø/Lifjell_skisenter/">yr.no: Værvarsel for Lifjell skisenter</a></noscript>
+                     <asp:HyperLink ID="hyperSommar" runat="server" 
+                         ImageUrl="Elementer/sommarland.jpg"   
+                         NavigateUrl="http://www.sommarland.no"  />
+             </div>
+<%--Her slutter div id ="annonse"--%>
+
+               <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+            
+               <%-- Her slutter div left for maincontent placeholder--%>
+            </div>
+            <%--Her slutter div id ="hoved"--%>
+
+             
+
+            <footer>
+                <p>
+                    Laget av Kristian D. Myhre<br />
+                    <asp:Label ID="SiteCopy" runat="server" />
+                </p>
+            </footer>
+            <%--Her slutter "footer"--%>
+        </div>
+        <%--Her slutter div id ="ramme"--%>
+
+        <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/Meny.xml"></asp:XmlDataSource>
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<MenuItem url="" Title="" tip="" target="">
+    <MenuItem url="~/Default.aspx" title="Forsiden" tip="Forsiden" target=""/>
+    <MenuItem url="~/Nyheter.aspx" title="Nyheter" tip="Siste nytt fra styre og stell" target="" />
+    <MenuItem url="~/UtleieOversikt.aspx" title="Søknad" tip="Oversikt over når hytta er utleid" target=""/>
+    <MenuItem url="~/Galleri.aspx" title="Bildegalleri" tip="Se bilder fra dugnader og andre begivenheter" target=""/>
+    <MenuItem url="~/Vedtekter.aspx" title="Vedtekter" tip="Vedtekter for Lille Frogneseter" target="" />
+        <MenuItem url="~/Oppfordring.aspx" title="Oppfordring" tip="En oppfordring til den enkelte" target=""/>
+        <MenuItem url="~/Vannpumpe.aspx" title="Vannpumpe" tip="Les om vannpumpa på hytta" target=""/>
+        <MenuItem url="~/Hytteregler.aspx" title="Hytteregler" tip="Regler for bruk av hytta" target=""/>
+        <MenuItem url="~/Utleieregler.aspx" title="Utleieregler" tip="Regler for leie av hytta" target=""/>
+    
+    <MenuItem url="~/Kart.aspx" title="Kart" tip="Veibeskrivelse til hytta" target=""/>
+  <MenuItem url="~/Soknadfrist.aspx" title="Søknadsfrist" tip="Søknadsfrister" target=""/>
+  <MenuItem url="~/Users/User.aspx" title="Min Side" tip="Brukerprofil" target=""/>
+    
+    <MenuItem url="~/Admin/Admin.aspx" title="Admin" tip="Administrasjon av Lille Frogneseteren" target=""/>
+   <MenuItem url="~/Kontakt.aspx" title="Kontakt" tip="Send en melding til styret" target=""/>
+  
+  <MenuItem url="http://www.skiinfo.no/ostlandet/lifjell/skianlegg.html" title="Føremelding" tip="Føremelding for Lifjell" target=""/>
+    <MenuItem url="http://www.midt-telemark.com/" title="Reisemål Bø" tip="Ferie i Bø, Nome og Sauherad" target=""/>
+  <MenuItem url="~/Sitemap.aspx" title="Sidekart" tip="Oversikt over hele siden" target=""/>
+  <MenuItem url="~/OmSiden.htm" title="Om Siden" tip="Beskrivelse av siden Lille Frogneseter" target=""/>
+  
+
+
+
+</MenuItem >

@@ -1,0 +1,279 @@
+﻿<!DOCTYPE>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="App_Themes/OmSiden/OmSiden.css">
+<title>Om Lille Frogneseter</title>
+</head>
+<body>
+<div id="ramme">
+  <header>
+    <h1><a id="opp"></a>Informasjon om  Lille Frogneseter</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#soknad">Søknad</a></li>
+      <li><a href="#reservering">Reservering</a></li>
+      <li><a href="#faktura">Faktura</a></li>
+      <li><a href="#betaling">Betaling</a></li>
+      <li><a href="#soek">Søk</a></li>
+      <li><a href="#nyhet">Nyheter</a></li>
+      <li><a href="#konfigurasjon">Konfigurasjon</a></li>
+      <li><a href="#bruker">Brukere</a></li>
+    </ul>
+  </nav>
+  <!--Her slutter meny-->
+  <div id="hoved">
+    <h2 >Innledning</h2>
+    <p>Denne siden er ment for å gi informasjon om hvordan siden er bygd opp, og som en hjelper for brukerene.</p>
+    <p><a href="http://www.lillefrogner.net">Lille Frogneseter</a> er en side for andelseiere av andelslaget Lille Frogneseter, hvor de kan reservere hytta, legge ut nyheter, oppdatere diverse info om andelslaget, hytteregler osv. </p>
+    <h2>Litt om Web utvikleren:</h2>
+    <p>Jeg heter Kristian D. Myhre og jobber som skiftleder i produksjonen på Felleskjøpet avd. Kambo.<br>
+      Jeg tar for tiden .NET studiet på deltid hos <a href="http://www.ecademy.no">eCademy</a>, som er et nettstudie på 4 år. <br>
+      Er inne i det siste året nå, og har siste eksamen i mars 2015. <br>
+      I fjor tok jeg eksamen i Web-utvikler hos eCademy, og fikk karakteren <strong>B</strong> ! Meget fornøyd med det. <br>
+      Det er den teknologien vi lærte da som denne siden er bygget på, som er <a href="http://www.asp.net/">ASP.NET 4.0</a> med en MS-SQL database.<br>
+      Webhotellet jeg har valgt å bruke for Lille Frogneseter er <a href="http://www.webhuset.no">Webhuset</a>. <br>
+      Jeg fikk muligheten til å jobbe med Lille Frogneseter
+      mens jeg studerer og tilsammen har jeg brukt ca. 200 timer siden juni 2013 på Lille Frogneseter. Er jo ikke en erfaren webutvikler, så derfor tar det litt tid. Men har fått mye erfaring med på lasset.</p>
+    <h2 >Statement of purpose</h2>
+    <p> Database ment for å kunne lagre nyheter for LilleFrogner, lagre bilder i album, 
+      skrive gjestebok/hyttebok og reservere hytta til andelseierne. </p>
+    <h2>Hvordan siden er bygd opp</h2>
+    <p> Det er ønske fra andelslaget at alle sider skal kunne redigeres av admin uten spesielle webutvikler kunnskaper.
+      Det er derfor lagt opp en database i bunn, som tar vare på brukere, hyttereservasjoner, bilder og nyheter. </p>
+    <p>Alle disse delene blir nærmere beskrevet under. <strong>Du kan også navigere deg frem i menyen på toppen av siden.</strong></p>
+    <hr>
+    <section id=soknad>
+      <h2>SØKNAD </h2>
+      <p>En andelseier må logge seg på. <br>
+        Bruk kalender til å se hvem dag hytta er ledig. </p>
+      <figure> <img src="OmSidenElementer/kalenderKnapp.png" width="90%"  alt="Kalender knapp"><!--height="222"-->
+        <figcaption>Fig.1 <br>
+          Trykk på Vis&frasl;Skjul kalender for å se oversikt over reservasjoner. </figcaption>
+      </figure>
+      <p>Kalender er skjult og fås frem ved å trykke på Vis&frasl;Skjul kalender. <br>
+        Trykk så i &quot;Fra&quot; rubrikk, og det popper opp en kalender, hvor man kan velge
+        fra dato. </p>
+      <figure> <img src="OmSidenElementer/litenKalender.png" width="90%"  alt="Liten kalender"><!--height="435"-->
+        <figcaption>Fig.2 <br>
+          Liten kalender som popper opp. </figcaption>
+      </figure>
+      <p>Er datoen ledig, vil den dukke opp i boksen under med ledetekst, og &quot;Til&quot; rubrikken dukker opp. <br>
+        &quot;Til&quot; rubrikken er skjult, til kriteriene for &quot;Fra&quot; rubrikken er oppfylt. <br>
+        Er datoen opptatt, får man en feilmelding, og man får heller ikke valgt  til dato. <br>
+        Om man velger en ledig Fra dato og en ledig Til dato, så vil det tas en sjekk om alle
+        datoene i mellom er ledig.<br>
+        Da hindrer man at det blir dobbelbooking.<br>
+        Man kan altså ikke legge inn ønske for dager hytta allerede er booket.<br>
+        Men flere andelseiere kan ha like ønsker, så lenge hytta er ledig. <br>
+        Alle ønsker må behandles av Admin.</p>
+      <p>Om alle kriterier er oppfylt, blir søknaden lagret i databasen, og få ha status 1. Mail blir sendt til den som
+        søker, om at bestilling er mottatt. </p>
+      <figure> <img src="OmSidenElementer/meldingsboksBestilling.png" width="90%"  alt="Melding ved bestilling"><!--height="316"-->
+        <figcaption>Fig.3 <br>
+          Melding som vises ved søknad på hytta. </figcaption>
+      </figure>
+      <p>Søknaden vil dukke opp i Admin/Administrer søknader.</p>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <hr>
+    <section id=reservering>
+      <h2 >RESERVERING</h2>
+      <p>Administrator må gå inn på siden Admin/Administrer søknader.<br>
+        Der vil alle søknader listes opp. Lister opp alle søknader i databasen med status 1.<br>
+        Til høyre for hver søknad, så er det en &quot;VIS&quot; hyperlink man kan trykke på <br>
+        for å vise søknaden.</p>
+      <figure> <img src="OmSidenElementer/VisReservasjoner.png" width="90%"  alt="Oversikt søknader"><!--height="392"-->
+        <figcaption> Fig.4 <br>
+          Oversikt søknader.<br>
+          Oversikten viser også &quot;Fra uke&quot; og &quot;Til uke&quot; søknaden gjelder for.<br>
+          Når man trykker på &quot;VIS&quot; må man sjekke tilgjengelighet for søknaden. Dette fordi mange<br>
+          kan søke på samme periode så lenge hytta er ledig. I mellomtiden kan hyta ha blitt tildelt en<br>
+          andelseier.<br>
+        </figcaption>
+      </figure>
+      <figure> <img src="OmSidenElementer/SeReservasjon.png" width="90%"  alt="Viser søknaden"><!--height="456"-->
+        <figcaption> Fig. 5 <br>
+          Viser søknaden.<br>
+          Når man trykker &quot;Sjekk tilgjengelighet&quot;, så sjekkes det i databasen at hytta ikke er reservert for alle <br>
+          dagene det søkes for. </figcaption>
+      </figure>
+      <p>Er en eller flere dager opptatt, kan man ikke Godkjenne, Knappen &quot;Godkjenn&quot; vil være inaktiv.<br>
+        Da kan man trykke &quot;Avvis&quot;, og statusen på søknaden blir satt til 3.</p>
+      <figure> <img src="OmSidenElementer/BehandleReservason.png" width="90%"  alt="Godkjenn søknad"><!--height="278"-->
+        <figcaption> Fig. 6 <br>
+          Er alle dager for søknadsperioden ledig, kan man godkjenne. Knappen &quot;Godkjenn&quot; blir aktiv.<br>
+          Trykk &quot;Godkjenn&quot; og søknaden får status 2.<br>
+          Den vil da dukke opp i Admin - Faktura. </figcaption>
+      </figure>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <hr>
+    <section id=faktura>
+      <h2 >FAKTURA</h2>
+      <p>Alle reservasjoner som er blitt godkjent, dukker opp i Faktura oversikten.</p>
+      <figure> <img src="OmSidenElementer/FakturaOversikt.png" width="90%"  alt="Faktura oversikt"><!--height="232"-->
+        <figcaption> Fig. 7 <br>
+          Her kan man vise faktura, ved å trykke på &quot;VIS&quot;, og deretter sende faktura. <br>
+          Bruker mottar da denne på mail. </figcaption>
+      </figure>
+      <figure> <img src="OmSidenElementer/SendFaktura.png" width="90%"  alt="Send Faktura"><!--height="397"-->
+        <figcaption> Fig. 8 <br>
+          ... og deretter sende faktura. <br>
+          Bruker mottar da denne på mail. </figcaption>
+      </figure>
+      <p>Man har mulighet til å endre på hvem kontonr. som skal stå oppført på faktura, samme med døgnpris på hytta.<br>
+        Denne benyttes til utregning av faktura.<br>
+        Det gjør man ved å gå inn på Admin, og velge -Endre E-post, kontonummer og pris.</p>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <section id="betaling">
+      <h2>BETALING (registrere)</h2>
+      <figure> <img src="OmSidenElementer/RegistrerBetaling.png" width="90%"  alt="Registrere betaling"><!--height="318"-->
+        <figcaption> Fig. 9 <br>
+          Man må sjekke at faktura er betalt, er den det, kan man registrere den som betalt <br>
+          og den forsvinner fra oversikten. </figcaption>
+      </figure>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <hr>
+    <section id="soek">
+      <h2 >SØK (i reservasjoner)</h2>
+      <p> Her kan man søke på forskjellige kriterier. Velger du ingen får du opp alle reservasjoner.</p>
+      <figure> <img src="OmSidenElementer/Soek.png" width="90%"  alt="Søk i reservasjoner"><!--height="657"-->
+        <figcaption> Fig. 10 <br>
+          Her kan man søke på en andelseier og se reservasjoner denne andelseier har.<br>
+          Man kan se om andelseier har betalt, eller har ubetalte fakturaer.<br>
+          Man kan se om andelseier har søknader som er avvist.<br>
+          Man kan søke etter bare søknader som er avvist.<br>
+          Det er bare å velge de kriteriene man vil og søke. </figcaption>
+      </figure>
+      <p>Trykk Søk og man kommer til denne siden.</p>
+      <figure> <img src="OmSidenElementer/ResultatSoek.png" width="90%"  alt="Resultat søk"><!--height="380"-->
+        <figcaption> Fig. 11 <br>
+          Resultatet av søket på de kriteriene man valgte. </figcaption>
+      </figure>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <hr>
+    <section id=nyhet>
+      <h2 >NYHETER</h2>
+      <p>Man kan legge til nyheter ved å være logget på som en administrator.</p>
+      <figure> <img src="OmSidenElementer/NyhetKnapper.png" width="90%"  alt="Nyheter: Endre, legge til,  slette eller legge i arkiv"><!--height="482"-->
+        <figcaption> Fig. 12 <br>
+          Gå inn på en nyhet, der er det knapper nederst på siden, som man kan 
+          legge til nyhet, endre nyhet, slette nyhet eller legge nyhet i arkiv. </figcaption>
+      </figure>
+      <p>Eller man kan gå via siden Admin og trykke på Legg til nyhet der.</p>
+      <figure> <img src="OmSidenElementer/leggTilNyhet.png" width="90%"  alt="Legg til nyhet"><!--height="440"-->
+        <figcaption> Fig. 13<br>
+          Nyhet er bygd opp med at man legger til en tittel, en ingress og et til flere avsnitt og et
+          bilde. </figcaption>
+      </figure>
+      <br>
+      <figure> <img src="OmSidenElementer/NyNyhet.png" width="90%"  alt="Opprette nyhet"><!--height="629"-->
+        <figcaption> Fig. 14<br>
+          Her kan man legge til flere avsnitt. "Legg til liste" knapp deaktivert. </figcaption>
+      </figure>
+      <br>
+      <figure> <img src="OmSidenElementer/LeggTilAvsnitt.png" width="90%"  alt="Legg til avsnitt"><!--height="704"-->
+        <figcaption> Fig. 15<br>
+          Legg til avsnitt </figcaption>
+      </figure>
+      <p>Sidene:
+      <ul>
+        <li>Forsiden,</li>
+        <li> Hytteregler,</li>
+        <li> Utleieregler, </li>
+        <li>Vannpumpe, </li>
+        <li>Oppfordring,</li>
+        <li> Vedtekter</li>
+      </ul>
+      <p>er lagret i nyhetsdatabasen. <br>
+        De har en fast ID ved oppslag fra databasen. <br>
+        Det er lagt inn sperre på å slette disse "nyhetene". <br>
+        Utformingen på disse sidene er fast men administrator kan endre tekst og bilder,
+        men ikke legge til flere bilder. </p>
+      <p>Sidene:</p>
+      <ul>
+        <li> Forsiden</li>
+        og
+        <li>Vannpumpe</li>
+      </ul>
+      <p>er bygd opp av en nyhet med avsnitt men blir utformet litt annerledes. </p>
+      <p>Siden: Oppfordring er bygd opp på samme måte som en nyhet, med mulighet for å legge til liste. <br>
+        Siden er da utformet med listevisning og evnt. underliste i tillegg til avsnitt. <br>
+      </p>
+      <p>Sidene: </p>
+      <ul>
+        <li>Hytteregler, </li>
+        <li>Utleieregler, </li>
+        <li>Vedtekter</li>
+      </ul>
+      <p>er bygdd opp på samme måte som en nyhet, 
+        men uten avsnitt men med liste og underliste i stedet.</p>
+      <figure> <img src="OmSidenElementer/LeggTilListe.png" width="90%"  alt="Legg til liste"><!--height="761"-->
+        <figcaption> Fig. 16<br>
+          Legge til liste. </figcaption>
+      </figure>
+      <br>
+      <figure> <img src="OmSidenElementer/LeggTilUnderliste.png" width="90%"  alt="Legg til underliste"><!--height="575"-->
+        <figcaption> Fig. 17<br>
+          &hellip;og legge til underliste til et listepunkt. </figcaption>
+      </figure>
+      <p>Med disse ovenstående forklaringer kan administrator av web-siden selv endre tekst og bilder på en rekke sider. </p>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <hr>
+    <section id= "konfigurasjon">
+      <h2 >KONFIGURASJON</h2>
+      <figure> <img src="OmSidenElementer/Konfigurasjon.png" width="90%"  alt="Konfigurasjon av e-postadresse, kontonummer og pris."><!--height="279"-->
+        <figcaption> Fig. 18<br>
+          Konfigurere e-post adresse, kontonummer som vises på faktura og pris som blir brukt til utregning av faktura. </figcaption>
+      </figure>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+    <hr>
+    <section id="bruker">
+      <h2 >BRUKERE</h2>
+      <p>Administrator må legge til brukere, da dette er en side kun for andelseiere.</p>
+      <figure> <img src="OmSidenElementer/LeggTilBruker.png" width="90%"  alt="Legg til bruker"><!--height="332"-->
+        <figcaption> Fig. 19<br>
+          Legge til bruker. </figcaption>
+      </figure>
+      <br>
+      <p>Når en bruker er opprettet, må brukeren få tilsendt passord og brukernavn, logge seg på og gå inn på Min side.<br>
+        Der vil bruker ved første pålogging ikke ha noen felter fylt ut, og man må fylle ut feltene.<br>
+        Dette er data som blir brukt under søkeprosessen fra søknad til faktura.</p>
+      <figure> <img src="OmSidenElementer/MinSide.png" width="90%"  alt="Min side"><!--height="545"-->
+        <figcaption> Fig. 20<br>
+          Oppdatere personalia for en bruker profil. Pålogget bruker får kun opp sin egen profil. </figcaption>
+      </figure>
+      <br>
+      <figure> <img src="OmSidenElementer/Brukere.png" width="90%"  alt="Oversikt brukerprofiler"><!--height="305"-->
+        <figcaption> Fig. 21<br>
+          Oversikt brukerprofiler.</figcaption>
+      </figure>
+      <br>
+      <figure> <img src="OmSidenElementer/EndreBruker.png" width="90%"  alt="Endre bruker"><!--height="380"-->
+        <figcaption> Fig. 22<br>
+          Endre en brukerprofil. Her vil kun profilen endres eller slettes. Selve brukeren må slettes med hjelp av web-designer... </figcaption>
+      </figure>
+      <a href="#opp">&uArr; Til Toppen &uArr;</a> </section>
+  </div>
+  <!--Her slutter hoved-->
+  <hr>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#soknad">Søknad</a></li>
+        <li><a href="#reservasjoner">Reservering</a></li>
+        <li><a href="#faktura">Faktura</a></li>
+        <li><a href="#betaling">Betaling</a></li>
+        <li><a href="#soek">Søk</a></li>
+        <li><a href="#nyhet">Nyheter </a></li>
+        <li><a href="#konfigurasjon">Konfigurasjon</a></li>
+        <li><a href="#bruker">Brukere</a></li>
+      </ul>
+    </nav>
+    <br>
+    <p>Copyright &copy; Kristian D. Myhre</p>
+  </footer>
+</div>
+<!--Her slutter ramme-->
+</body>
+</html>
